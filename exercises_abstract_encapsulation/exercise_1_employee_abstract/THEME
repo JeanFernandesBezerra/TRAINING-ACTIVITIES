@@ -1,0 +1,13 @@
+/*
+* Enunciado: O conceito de abstração na POO nos ajuda a focar apenas nos
+* aspectos essenciais de um objeto do mundo real para um determinado sistema.
+*
+* O que fazer: Crie uma classe abstrata chamada Funcionario que possua os atributos protegidos
+* nome (String) e salarioBase (double), além de um construtor e um
+* metodo abstrato chamado calcularSalarioFinal(). Em seguida,
+* crie uma classe concreta chamada Vendedor que herda de Funcionario,
+* implementa o metodo abstrato (somando uma comissão fixa ao salário base) e imprime os dados.
+*
+*
+*
+* */

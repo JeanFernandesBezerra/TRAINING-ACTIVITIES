@@ -1,0 +1,6 @@
+Enunciado: Abstração e reutilização de código através de métodos concretos na classe abstrata.
+
+O que fazer: Crie uma classe abstrata ContaBancaria que contenha um atributo comum numeroConta (String)
+e um método concreto (com corpo) chamado exibirCabecalho() que imprime o número da conta.
+Adicione também um método abstrato sacar(double valor).
+ Crie a subclasse ContaCorrente que herda o comportamento comum e implementa a regra de saque.

@@ -1,0 +1,8 @@
+/*Enunciado: Métodos abstratos forçam as subclasses a fornecerem suas próprias implementações.
+*
+*O que fazer: Escreva uma classe abstrata DispositivoEletronico com um metodo abstrato ligar().
+* Crie duas subclasses concretas: Televisao e Smartphone.
+* Cada uma deve implementar o metodo ligar() imprimindo uma mensagem específica
+* (ex: "A TV ligou na porta HDMI").
+* Explique por que a classe DispositivoEletronico não pode ser instanciada diretamente com new.
+*/

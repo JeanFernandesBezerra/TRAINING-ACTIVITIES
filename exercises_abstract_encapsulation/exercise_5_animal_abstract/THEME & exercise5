@@ -1,0 +1,7 @@
+Enunciado: Decisão de projeto: quando usar classe abstrata?
+
+O que fazer: Escreva um breve texto justificando conceitualmente por que criamos uma classe abstrata Animal com um método abstrato emitirSom(),
+em vez de colocar o método diretamente na classe Animal. Como isso beneficia a manutenção do código se adicionarmos 20 novos animais no sistema?
+
+RESPOSTA: por o método emitir som como um método abstrato ajuda ao criar novos animais porque cada animal emiti um som diferente,mesmo que alguns
+          emitam parecidos,no momento de criação,é mais flexível a sintetização

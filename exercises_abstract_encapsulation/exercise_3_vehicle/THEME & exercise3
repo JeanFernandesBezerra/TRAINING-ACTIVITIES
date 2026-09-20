@@ -1,0 +1,20 @@
+Enunciado: Analisando o erro de compilação em classes abstratas.
+
+O que fazer: Considere o seguinte trecho de código no papel ou na mente:
+
+=============================================INICIO-CÓDIGO=========================================================
+abstract class Veiculo {
+    String modelo;
+    abstract void acelerar();
+}
+class Moto extends Veiculo {
+    // O que acontece aqui se eu esquecer de colocar o método acelerar()?
+}
+==============================================FIM-CÓDIGO===========================================================
+
+Explique detalhadamente qual erro o compilador do Java
+vai apontar e qual é o motivo conceitual para esse comportamento.
+
+RESPOSTA:
+PELO FATO DO CÓDIGO SER ABSTRATO E SER PARTE DA EXTENSÃO DO CÓDIGO PAI, O PROGRAMA DARÁ ERRO AFIRMANDO QUE FALTAR
+ESCREVER O MÉTODO ACELERAR();.

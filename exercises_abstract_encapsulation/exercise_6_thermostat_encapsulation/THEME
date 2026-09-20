@@ -1,0 +1,5 @@
+/*Enunciado: O encapsulamento protege o estado interno dos objetos contra modificações indevidas.
+*O que fazer: Crie uma classe chamada Thermostat que represente o controle de temperatura de um ambiente.
+*O atributo de temperatura (currentTemperature) deve ser estritamente privado (private).
+*Escreva os métodos públicos getTemperature() e setTemperature(double currentTemperature), além do construtor.
+*/

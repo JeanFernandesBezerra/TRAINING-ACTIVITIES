@@ -1,0 +1,8 @@
+Enunciado: Vazamento de referências em vetores/arrays.
+
+O que fazer: Crie uma classe CarrinhoDeCompras que possui um array privado private String[] itens;
+inicializado no construtor. Se o seu método getItens() retornar a referência direta do vetor (return this.itens;),
+ um código externo poderá modificar qualquer posição do array de fora da classe sem nenhuma validação.
+
+O desafio: Escreva o código do método getItens() de forma a proteger o encapsulamento,
+fazendo com que ele retorne uma cópia independente do array (utilizando Arrays.copyOf(...) ou um laço for para preencher um novo vetor).

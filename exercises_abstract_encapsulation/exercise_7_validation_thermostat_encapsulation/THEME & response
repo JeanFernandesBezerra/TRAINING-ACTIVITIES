@@ -1,0 +1,13 @@
+/* Enunciado: Validação de regras de negócio via encapsulamento.
+* O que fazer: Utilizando a classe Thermostat da questão anterior, modifique o metodo
+* setTemperature(double currentTemperature) para que ele rejeite
+* (exibindo uma mensagem de erro no console e mantendo a temperatura anterior)
+* caso o valor informado seja menor que 10.0°C ou maior que 35.0°C.
+* Atualize também o construtor para passar por essa validação.
+* Explique por que deixar o atributo público permitiria que qualquer parte do código quebrasse essa regra.
+*/
+
+RESPOSTA:
+O MOTIVO QUE QUEBRARIA O REGRA SE DEIXASSE PÚBLICO É PORQUE DEIXARIA DE SER NECESSÁRIO USAR O "SET" PARA ALTERAR.
+DESSE MODO, PARA MANTER A ORDEM, O ATRIBUTO É PRIVADO E SÓ PODE SER ALTERADO ATRAVÉS DO "SET",CASO PASSE PELAS
+VALIDAÇÕES.
