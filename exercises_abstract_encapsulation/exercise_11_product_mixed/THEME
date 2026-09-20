@@ -1,6 +1,0 @@
-Enunciado: Unindo abstração e encapsulamento em uma classe de domínio.
-
-O que fazer: Crie uma classe abstrata chamada Produto que utilize encapsulamento.
-Ela deve ter os atributos privados private String nome; e private double preco;,
-acompanhados de seus getters e setters com validação (o preço não pode ser negativo).
-Adicione um método abstrato public abstract double calcularDesconto();.
