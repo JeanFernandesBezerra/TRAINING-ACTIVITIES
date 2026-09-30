@@ -1,0 +1,3 @@
+- no python nao existe getters e setters propriamente ditos
+- utiliza-se o @property para tratar métodos como se fossem atributos limpos
+

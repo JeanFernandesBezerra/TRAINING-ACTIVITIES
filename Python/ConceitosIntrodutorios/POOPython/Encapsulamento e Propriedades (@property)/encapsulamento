@@ -1,0 +1,6 @@
+público: self.nome | acesso livre
+
+protegido (conveção): self._nome | indica a outros desenvolvedores; não impede acesso
+
+privado (name mangling): self.__saldo | altera o nome da variável dificultando acesso internamente
+
