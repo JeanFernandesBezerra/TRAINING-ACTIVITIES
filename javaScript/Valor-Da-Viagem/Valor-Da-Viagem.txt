@@ -1,0 +1,135 @@
+// ENTRADA DO NOME DO PASSAGEIRO
+console.log("-".repeat(14) + "APELIDO" + "-".repeat(14));
+const nomePassageiro = prompt("DIGITE O DO PASSAGEIRO: ");
+console.log();
+
+console.log("-".repeat(13) + "CATEGORIA" + "-".repeat(13));
+console.log("1 - Adulto");
+console.log("2 - Estudante");
+console.log("3 - Idoso");
+console.log("4 - Criança menor que 5 anos");
+console.log("-".repeat(35));
+
+// ENTRADA DE CATEGORIA
+const categoria = Number(prompt("DIGITE A CATEGORIA: "));
+console.log();
+
+// VALIDAÇÃO DE CATEGORIA
+let categoriaValidacao = true;
+let desconto;
+switch (categoria) {
+    case 1:
+        desconto = 0;
+        break;
+
+    case 2:
+    case 3:
+        desconto = 0.5;
+        break;
+
+    case 4:
+        desconto = 1;
+        break;
+
+    default:
+        console.log("CATEGORIA INVÁLIDA!");
+        categoriaValidacao = false;
+}
+
+if (categoriaValidacao === true){
+    console.log("-".repeat(13) + "PASSAGENS" + "-".repeat(13));
+    const passagemQuantidade = Number(prompt("DIGITE O NÚMERO DE PASSAGENS: "));
+    console.log();
+
+    // VALIDAÇÃO DE PASSAGEM
+    if (passagemQuantidade >= 1) {
+        console.log("-".repeat(14) + "DESTINO" + "-".repeat(14));
+        console.log("1 - Destino A R$45");
+        console.log("2 - Destino B R$72");
+        console.log("3 - Destino C R$110");
+        console.log("4 - Destino D R$138");
+        console.log("-".repeat(35));
+
+        const destino = Number(prompt("DIGITE O DESTINO: "));
+        console.log();
+
+        let destinoValor;
+        let destinoNome;
+        let destinoValidacao = true;
+
+        // VALIDAÇÃO DE DESTINO
+        switch (destino) {
+            case 1:
+                destinoValor = 45;
+                destinoNome = "A";
+                break;
+
+            case 2:
+                destinoValor = 72;
+                destinoNome = "B";
+                break;
+
+            case 3:
+                destinoValor = 110;
+                destinoNome = "C";
+                break;
+
+            case 4:
+                destinoValor = 138;
+                destinoNome = "D";
+                break;
+
+            default:
+                console.log("DESTINO INVÁLIDO!");
+                destinoValidacao = false;
+        }
+
+        if (destinoValidacao) {
+            // CÁLCULOS
+            const subtotal = destinoValor * passagemQuantidade;
+            const descontoAplicado = subtotal * desconto;
+            const total = subtotal - descontoAplicado;
+
+            // TIPO DE EMBARQUE
+            let embarque;
+            switch (true) {
+                case total === 0:
+                    embarque = "Embarque gratuito liberado.";
+                    break;
+
+                case total > 0 && total < 100:
+                    embarque = "Dirija-se ao guichê para pagamento.";
+                    break;
+
+                case total >= 100 && total < 200:
+                    embarque = "Pagamento via terminal disponível.";
+                    break;
+
+                case total >= 200:
+                    embarque = "Atendimento prioritário no guichê VIP.";
+                    break;
+            }
+
+            // FORMA DE PAGAMENTO
+            const formaPagamento =
+                total < 100
+                    ? "PAGAMENTO À VISTA!"
+                    : "PARCELÁVEL EM ATÉ 3X SEM JUROS!";
+            // COMPROVANTE
+            console.log("-".repeat(12) + "COMPROVANTE" + "-".repeat(12));
+            console.log("Nome do passageiro: " + nomePassageiro);
+            console.log("Destino: " + destinoNome);
+            console.log("Quantidade de passagens: " + passagemQuantidade);
+            console.log("Subtotal: R$" + subtotal.toFixed(2));
+            console.log("Desconto: R$" + descontoAplicado.toFixed(2));
+            console.log("Total: R$" + total.toFixed(2));
+            console.log("Forma de pagamento: " + formaPagamento);
+            console.log(embarque);
+
+            console.log("-".repeat(35));
+        }
+    }
+    else{
+        console.log("QUANTIDADE DE PASSAGENS INVÁLIDA!");
+    }
+}

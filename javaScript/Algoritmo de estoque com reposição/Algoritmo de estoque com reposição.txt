@@ -1,0 +1,36 @@
+//Algoritmo de estoque com reposição
+let quantidadeDisponivel = 500;
+let quantidadeReabastecimento = 0;
+let quantidadeParcial = 0;
+
+for (let dia = 1; dia <= 30; dia++) {
+    let pedido = Number(prompt("Dia " + dia + " - Quantidade Vendida:"));
+
+    if (pedido > quantidadeDisponivel) {
+        console.log("-".repeat(20));
+        console.log("VENDA PARCIAL no dia " + dia + ": pedido " + pedido + ", atendido " + quantidadeDisponivel);
+        
+        quantidadeParcial++;
+        pedido = quantidadeDisponivel;
+    }
+
+    quantidadeDisponivel -= pedido;
+
+    if (quantidadeDisponivel === 0) {
+        console.log("ESTOQUE ZERADO no dia " + dia);
+        break;
+    }
+
+    if (quantidadeDisponivel < 80) {
+        if (quantidadeReabastecimento < 2) {
+            quantidadeDisponivel += 200;
+            quantidadeReabastecimento++;
+        } else {
+            console.log("SEM REPOSIÇÃO no dia " + dia + " --- nível crítico");
+        }
+    }
+}
+
+console.log("Quantidade restante: " + quantidadeDisponivel);
+console.log("Total de reabastecimentos: " + quantidadeReabastecimento);
+console.log("Dias com saída parcial: " + quantidadeParcial);
