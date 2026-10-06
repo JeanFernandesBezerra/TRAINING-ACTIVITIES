@@ -3,8 +3,8 @@ package arraylist_training;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aprendendo {
-    public static void main(String[] args) {
+public class AprendendoArrayList{
+    public static void main(String[] args){
         List<String> comidas = new ArrayList<>();
 
         comidas.add("torta");
