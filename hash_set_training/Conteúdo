@@ -1,0 +1,39 @@
+Diferentemente do HashMap, o HashSet não trabalha com pares de chave e valor. Ele armazena apenas elementos únicos.
+
+exemplo:
+------------------------------------------
+HashSet<String> nomes = new HashSet<>();
+
+nomes.add("Jean");
+nomes.add("Carlos");
+nomes.add("Maria");
+nomes.add("Jean");
+------------------------------------------
+Características:
+- Não permite elementos duplicados.
+- Não trabalha com chave e valor.
+- Não garante ordem de inserção.
+- Permite verificar se um elemento existe com contains().
+
+=====================================================================
+   [CARACTERISTICAS]   |     [ARRAYLIST]     |        [HASHMAP]
+-----------------------|---------------------|------------------------
+armazena               |    chave e valor    |        elementos
+-----------------------|---------------------|------------------------
+duplicatas             |      chaves não     |           nao
+-----------------------|---------------------|------------------------
+busca                  |        get()        |        contains()
+-----------------------|---------------------|------------------------
+adicionar              |        put()        |         remove()
+-----------------------|---------------------|------------------------
+remover                |         nao         |           nao
+======================================================================
+
+----------------------------------------------
+exemplo [Sistema de controle de presença]:
+HashSet<String> presentes = new HashSet<>();
+
+presentes.add("Jean");
+presentes.add("Carlos");
+presentes.add("Maria");
+----------------------------------------------
