@@ -1,0 +1,52 @@
+hashing -> HashMap
+O Hash permite que você armazene dados associados a uma chave, tornando a busca muito mais eficiente em muitos casos.
+---------------------------
+exemplo:
+chave: 123 , 762     , 984
+valor: jean, kamille , joao
+---------------------------
+======== COMO FUNCIONA O HashMap ========
+A ideia central é que o HashMap utiliza uma função chamada função hash para transformar uma chave em um valor numérico,
+que ajuda a determinar onde aquela entrada será armazenada internamente.
+
+[CHAVE] jean
+    V
+    V
+[FUNCAO HASH] calcula um hash a partir da chave
+    V
+    V
+[HASH] 83921
+---------------------------
+O HashMap utiliza esse resultado para ajudar a determinar onde armazenar e localizar a entrada.
+Internamente, o HashMap calcula o hash da chave "Jean" para ajudar a encontrar a posição de armazenamento.
+
+======== QUANDO FAZ .get() ========
+Ele utiliza o hash da chave novamente para procurar a entrada correspondente.
+Isso é o que torna a busca tão eficiente em muitos casos.
+
+======== DUAS CHAVES GERAREM O MESMO HASH ========
+É chamado de colisão de hash.
+
+Duas chaves diferentes podem produzir o mesmo hash ou acabar direcionadas para a mesma posição interna.
+O HashMap possui mecanismos para tratar essas situações, verificando as chaves para distinguir as entradas.
+Portanto, o hash não é a própria chave e nem garante que cada chave terá um resultado exclusivo.
+
+======== HashMap > ArrayList ? ========
+[Encontrar um aluno pelo seu número de matrícula.]
+Com ArrayList, você normalmente percorre a lista até encontrar.
+Com HashMap, você usa a matrícula como chave para localizar o aluno diretamente.
+
+=====================================================================
+        [OPERACAO]     |     [ARRAYLIST]     |        [HASHMAP]
+-----------------------|---------------------|------------------------
+adicionar              |        add()        |          put()
+-----------------------|---------------------|------------------------
+buscar                 |      get(index)     |         get(key)
+-----------------------|---------------------|------------------------
+remover                |     remove(index)   |        remove(key)
+-----------------------|---------------------|------------------------
+verificar existencia   |      contains()     |       containsKey()
+-----------------------|---------------------|------------------------
+acessar por chave      |         nao         |           sim
+======================================================================
+
